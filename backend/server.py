@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import List
 import re
 import os
-from mangum import Mangum  # AWS Lambda adapter for FastAPI
+
 app = FastAPI()
 
 # Define a request model
@@ -44,4 +44,3 @@ async def process_data(input_data: DataInput):
         "highest_alphabet": [highest_alphabet] if highest_alphabet else []
     }
 
-handler = Mangum(app)  # Required for Netlify Functions
