@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const InputForm = ({ setResponse }) => {
   const [inputData, setInputData] = useState("");
-  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL; // Get from env
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "/api";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
